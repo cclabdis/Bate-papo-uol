@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="logo-us" rel="shortcut icon" href="./img/logo-uol-icon-1024.png" type="image/x-icon" />
+    <title>Bate papo UOL</title>
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+
+  <body>
+
+    
+    <section class="loginOverlay" id="overlay">
+      <div class="idAuty">
+        <img class="logo" src="./img/logo-uol-icon-1024.png" alt="logo do UOl" />
+        <input
+          id="inputLogin"
+          type="text"
+          placeholder="Digite seu nome"
+          data-identifier="enterName"
+        />
+        <button onclick="getUsername()" data-identifier="start">Entrar</button>
+      </div>
+
+
+      <nav class="pageLoading hidden" id="loading">
+        <img class="loading-in" src="./img/loading-gif.gif" alt="loading" />
+        <p>Carregando...</p>
+      </nav>
+
+    </section>
+
+    <main>
+
+      <header>
+        <img class="logo-up" src="./img/logo-uol-icon-1024.png" alt="logo UOL" /><ion-icon name="people"></ion-icon>
+      </header>
+
+      <ul id="messageBox"></ul>
+      
+      <footer>
+        <label class="label" for="inputMessage">
+          <input
+            class="inputMessage"
+            type="text"
+            id="inputMessage"
+            placeholder="Escreva aqui..."
+          />
+        </label>
+        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
+      </footer>
+
+    </main>
+
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Script/script.js"></script>
+  </body>
+</html>
