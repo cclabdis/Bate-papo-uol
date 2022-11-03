@@ -20,12 +20,13 @@
       <div class="idAuty">
         <img class="logo" src="./img/logo-uol-icon-1024.png" alt="logo do UOl" />
         <input
+          data-test="input-name"
           id="inputLogin"
           type="text"
           placeholder="Digite seu nome"
           data-identifier="enterName"
         />
-        <button onclick="getUsername()" data-identifier="start">Entrar</button>
+        <button onclick="getUsername()" data-identifier="start" data-test="input-name">Entrar</button>
       </div>
 
 
@@ -39,21 +40,21 @@
     <main>
 
       <header>
-        <img class="logo-up" src="./img/logo-uol-icon-1024.png" alt="logo UOL" /><ion-icon name="people"></ion-icon>
+        <img class="logo-up" src="./img/logo-uol-icon-1024.png" alt="logo UOL" data-test="open-participants"/><ion-icon name="people"></ion-icon>
       </header>
 
       <ul id="messageBox"></ul>
       
       <footer>
         <label class="label" for="inputMessage">
-          <input
+          <input data-test="input-message"
             class="inputMessage"
             type="text"
             id="inputMessage"
             placeholder="Escreva aqui..."
           />
         </label>
-        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
+        <ion-icon onclick="sendMessage()" name="paper-plane-outline" data-test="send-message"></ion-icon>
       </footer>
 
     </main>

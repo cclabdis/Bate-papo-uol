@@ -44,13 +44,13 @@ function getMessage(message) {
   for (let i = 0; i < message.data.length; i++) {
     if (message.data[i].type === "status") {
       messageBox.innerHTML += `
-            <li class="entry">
+            <li class="entry" data-test="message">
             <p><span class="hours">${message.data[i].time}</span>&nbsp <strong>${message.data[i].from}</strong> 
             para <strong>${message.data[i].to}</strong>:&nbsp ${message.data[i].text}</p>
             </li>`;
     } else if (message.data[i].type === "message") {
       messageBox.innerHTML += `
-            <li>
+            <li data-test="message">
             <p><span class="hours">${message.data[i].time}</span>&nbsp <strong>${message.data[i].from}</strong> 
             para <strong>${message.data[i].to}</strong>:&nbsp ${message.data[i].text}</p>
             </li>`;
@@ -59,7 +59,7 @@ function getMessage(message) {
       (message.data[i].to === objectUsername.name || message.data[i].from === objectUsername)
     ) {
       messageBox.innerHTML += `
-            <li class="outmain">
+            <li class="outmain" data-test="message">
             <p><span class="hours">${message.data[i].time}</span>&nbsp <strong>${message.data[i].from}</strong> 
             para <strong>${message.data[i].to}</strong>:&nbsp ${message.data[i].text}</p>
             </li>`;
